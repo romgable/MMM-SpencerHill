@@ -1,0 +1,20 @@
+{% if config.header %}
+  <header>
+    <span>{{ config.header }}</span>
+  </header>
+{% endif %}
+
+{% if configError %}
+  <div class="dimmed light">{{ "CONFIG_ERROR" | translate }}</div>
+{% elif not state.broadcasts %}
+  <div class="dimmed light">{{ "LOADING" | translate }}</div>
+{% elif state.broadcasts.length === 0 %}
+  <div class="dimmed light">{{ "NO_DATA" | translate }}</div>
+{% else %}
+  {% for broadcast in state.broadcasts %}
+    <div class="align-left broadcast-entry">
+      <div class="xsmall light">{{ broadcast.date }} &mdash; {{ broadcast.channel }}</div>
+      <div class="align-left">{{ broadcast.title }}</div>
+    </div>
+  {% endfor %}
+{% endif %}

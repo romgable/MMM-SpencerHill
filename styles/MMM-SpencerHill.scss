@@ -1,0 +1,9 @@
+.MMM-SpencerHill {
+  & .broadcast-entry {
+    max-width: 400px;
+
+    & + .broadcast-entry {
+      margin-top: 8px;
+    }
+  }
+}

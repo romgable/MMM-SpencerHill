@@ -1,0 +1,22 @@
+services:
+  app:
+    build: .
+    image: karsten13/magicmirror:alpine
+    container_name: MMM-SpencerHill
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./docker/logs:/app/logs
+      - ./docker/config:/app/config
+      - ./node_helper.js:/app/build/node_helper.js
+      - ./MMM-SpencerHill.js:/app/build/MMM-SpencerHill.js
+      - ./MMM-SpencerHill.css:/app/build/MMM-SpencerHill.css
+      - ./templates:/app/build/templates
+      - ./translations:/app/build/translations
+    command: sh -c "
+      echo 'Copying config.js to /opt/magic_mirror/config/' &&
+      cp /app/config/test_config.js /opt/magic_mirror/config/config.js &&
+      echo 'Copying build directory to /opt/magic_mirror/modules/MMM-SpencerHill' &&
+      cp -R /app/build /opt/magic_mirror/modules/MMM-SpencerHill &&
+      echo 'Starting server and logging to /app/logs/server.log' &&
+      npm run server > /app/logs/server.log 2>&1"

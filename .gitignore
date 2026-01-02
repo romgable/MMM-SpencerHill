@@ -1,0 +1,8 @@
+node_modules
+
+node_helper.js
+MMM-SpencerHill.js
+MMM-SpencerHill.css
+
+docker/logs/**
+
