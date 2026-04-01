@@ -17,7 +17,7 @@ export default NodeHelper.create({
       logger.debug('Notification received.', notification);
       const config: Config = payload as Config;
       setDefaultOptions({ locale: config.locale === 'de' ? de : enGB });
-      const broadcastData = await getBroadcastData();
+      const broadcastData = await getBroadcastData(config.baseUrl);
       const filteredBroadcasts = applyFilter(broadcastData, config);
       this.sendSocketNotification(SocketNotification.DATA_RECEIVED, filteredBroadcasts);
     }

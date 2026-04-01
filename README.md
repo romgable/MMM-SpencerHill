@@ -30,6 +30,8 @@ These are the possible configuration options and their default values:
   module: "MMM-SpencerHill",
   position: "top_center",
   config: {
+    // Set the base URL for fetching the broadcast data.
+    baseUrl: 'https://spencerhilldb.de/tvtermine.php',
     // Set the header above the module. Leave empty to hide the header.
     header: 'Bud Spencer & Terence Hill',
     // Set the update interval in miliseconds in which the data will be fetched.
@@ -66,7 +68,7 @@ npm install
 
 To develop on the module and automatically reload the build run:
 ```
-npm run develop
+npm run dev
 ```
 
 To build the project and bundle it:

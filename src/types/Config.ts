@@ -1,4 +1,5 @@
 export type Config = {
+  baseUrl: string;
   header: string;
   updateInterval: number;
   blacklist: string[];

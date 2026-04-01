@@ -4,6 +4,7 @@ import { SocketNotification } from './types/Notification';
 
 Module.register<Config>('MMM-SpencerHill', {
   defaults: {
+    baseUrl: 'https://spencerhilldb.de/tvtermine.php',
     header: 'Bud Spencer & Terence Hill',
     updateInterval: 60 * 60 * 1000,
     blacklist: [],
