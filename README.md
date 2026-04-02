@@ -1,6 +1,6 @@
 # MMM-SpencerHill
 
-Module for [MagicMirror²](https://magicmirror.builders/) to display broadcast schedules of Bud Spencer and Terence Hill movies in the German-speaking region.
+[MagicMirror²](https://magicmirror.builders/) module to display broadcasting dates for Bud Spencer and Terence Hill movies in Austria, Germany and Switzerland.
 
 ## Requirements
 

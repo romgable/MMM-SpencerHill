@@ -1,7 +1,7 @@
 {
   "name": "mmm-spencerhill",
   "version": "1.0.0",
-  "description": "A MagicMirror² module to display broadcasting dates for Bud Spencer and Terence Hill movies in Austria, Germany and Switzerland.",
+  "description": "MagicMirror² module to display broadcasting dates for Bud Spencer and Terence Hill movies in Austria, Germany and Switzerland.",
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "rollup -c",
